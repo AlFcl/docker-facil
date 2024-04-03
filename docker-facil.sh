@@ -2,15 +2,23 @@
 # Autor: AlFcl
 # GitHub: https://github.com/alfcl
 
-# Definición de colores
-YELLOW='\033[1;33m'
+
+# Colores
+ORANGE='\033[38;5;208m'
 NC='\033[0m'  # No Color
 
-# Selección de idioma
-    echo "Select your language / Selecciona tu idioma"
-    echo "1. Español"
-    echo "2. English"
-    read -p "Select your language / Selecciona tu idioma (1-2): " LANG_OPTION
+# Centralizar texto
+# Nota: Esta es una aproximación y puede no centrar el texto perfectamente en todas las terminales.
+pad=$(printf '%0.1s' " "{1..60})
+padlength=40
+
+# Título y selección de idioma
+echo -e "\n${ORANGE}$(printf '%*.*s %s %*.*s' 0 $((padlength - ${#title} / 2)) "$pad" "Docker-Facil" 0 $((padlength - ${#title} / 2)) "$pad")${NC}"
+echo -e "${ORANGE}Select your language / Selecciona tu idioma${NC}"
+echo -e "${ORANGE}1. Español${NC}"
+echo -e "${ORANGE}2. English${NC}"
+read -p "$(echo -e ${ORANGE}"Select your language / Selecciona tu idioma (1-2): "${NC})" LANG_OPTION
+
 
 LENG_PATH="leng"
 
