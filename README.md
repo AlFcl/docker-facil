@@ -14,7 +14,7 @@ bash
 ~~~bash  
 git clone https://github.com/AlFcl/docker-facil.git
 cd docker-facil
-./install.sh
+./docker-facil.sh
 ~~~  
 
 
@@ -38,7 +38,7 @@ To install Docker and Docker Compose using Docker-Fácil, simply clone this repo
 ~~~bash 
 git clone https://github.com/AlFcl/docker-facil.git
 cd docker-facil
-./install.sh
+./docker-facil.sh
 ~~~  
 
 Usage
